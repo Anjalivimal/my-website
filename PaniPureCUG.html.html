@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chalo Pani Puri Khate Hai</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+    body {
+      background: linear-gradient(to right, #f9d423, #ff4e50);
+      font-family: 'Segoe UI', sans-serif;
+      text-align: center;
+      color: #fff;
+      padding: 60px 20px;
+    }
+    .container {
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 30px;
+      border-radius: 20px;
+      max-width: 500px;
+      margin: auto;
+    }
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 15px;
+    }
+    p {
+      font-size: 1.1rem;
+    }
+    .btn {
+      margin: 15px 10px;
+      padding: 12px 20px;
+      background-color: #ffffff;
+      color: #ff4e50;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 10px;
+      display: inline-block;
+    }
+    .btn:hover {
+      background-color: #ffe7e7;
+    }
+    .special-offer {
+      font-family: 'Pacifico', cursive;
+      color: #ffff00;
+      background: #ff0066;
+      padding: 10px 15px;
+      border-radius: 10px;
+      font-size: 1.4rem;
+      margin-top: 20px;
+      display: inline-block;
+      animation: pop 1s ease infinite alternate;
+    }
+    @keyframes pop {
+      from { transform: scale(1); }
+      to { transform: scale(1.05); }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Chalo Pani Puri Khate Hai 😋</h1>
+    <p>Taste ka Naya Tadka!<br>Thanks for scanning the QR code.</p>
+
+    <!-- 🎉 Dynamic Congrats Line -->
+    <div class="special-offer" id="reward-text">
+      🎉 Checking your luck...
+    </div>
+
+    <a class="btn" href="https://wa.me/91XXXXXXXXXX" target="_blank">Order on WhatsApp</a>
+    <a class="btn" href="https://instagram.com/yourpage" target="_blank">Follow on Instagram</a>
+  </div>
+
+  <!-- 👇 JavaScript for Random Number -->
+  <script>
+    const randomPuris = Math.floor(Math.random() * 8) + 1;
+    document.getElementById('reward-text').textContent =
+      `🎉 Congratulations! You got ${randomPuris} pani puri FREE!`;
+  </script>
+</body>
+</html>
